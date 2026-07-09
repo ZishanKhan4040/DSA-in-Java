@@ -11,7 +11,7 @@ String str="Hello World";
       }
     }
     catch(Exception e){
-System.out.println("Length of String "+str+" "+i);
+System.out.println("Length of String "+str+" is "+i);
       
     }
     
