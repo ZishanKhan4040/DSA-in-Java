@@ -1,7 +1,7 @@
 public class LengthOfString{
 
   public static void main(String [] args){
-String str="Hello World";
+String str="Hello World Welcome";
  int i=0;
     try{
      
@@ -11,7 +11,7 @@ String str="Hello World";
       }
     }
     catch(Exception e){
-System.out.println("Length of String "+str+" is "+i);
+System.out.println(" The Length of String "+str+" is "+i);
       
     }
     
