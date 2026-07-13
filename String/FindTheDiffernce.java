@@ -18,7 +18,7 @@ ch=(char)(ch^t.charAt(i));
 }
 
 
-return (char)ch;
+return ch;
 }
 
 
