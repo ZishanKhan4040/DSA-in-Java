@@ -14,7 +14,7 @@ else if(moves.charAt(i)=='D') y--;
 else if(moves.charAt(i)=='R') x++;
 else if(moves.charAt(i)=='U') y++;
 }
-if(count==0) return true;
+if(x==0 && y==0) return true;
 return false;
 }
 
