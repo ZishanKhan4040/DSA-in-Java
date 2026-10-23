@@ -1,0 +1,38 @@
+import java.util.ArrayList;
+
+class Solution {
+    public Node flatten(Node head) {
+        if (head == null) return null;
+
+        Node temp = head;
+        ArrayList<Node> al = new ArrayList<>();
+
+        while (temp != null) {
+
+            if (temp.child != null) {
+
+                if (temp.next != null) {
+                    al.add(temp.next);
+                }
+
+                temp.next = temp.child;
+                temp.child.prev = temp;
+                temp.child = null;
+            }
+
+            if (temp.next != null) {
+                temp = temp.next;
+            } else if (!al.isEmpty()) {
+                Node nextNode = al.remove(al.size() - 1);
+
+                temp.next = nextNode;
+                nextNode.prev = temp;
+                temp = nextNode;
+            } else {
+                break;
+            }
+        }
+
+        return head;
+    }
+}
